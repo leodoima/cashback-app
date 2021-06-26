@@ -1,9 +1,7 @@
 import React from 'react';
 
-import Index from './src/';
+import Index from './src';
 
 export default function App() {
-  return (
-    <Index />
-  );
+  return <Index />;
 }

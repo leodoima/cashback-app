@@ -1,12 +1,14 @@
 import React from 'react';
-import { View, Text} from 'react-native';
+import { View } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 
-const Index: React.FC =() => (
-  <View style={{flex: 1, backgroundColor: '#ffffff'}}>
-    <StatusBar style="dark" backgroundColor="#ffffff" />
+import Welcome from './pages/Welcome';
 
-    <Text>Poupe o seu dinheiro</Text>
+const Index: React.FC = () => (
+  <View style={{ flex: 1, backgroundColor: '#ffffff' }}>
+    <StatusBar backgroundColor="#ffffff" />
+
+    <Welcome />
   </View>
 );
 
