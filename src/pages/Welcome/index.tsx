@@ -13,7 +13,7 @@ import {
   ButtonAccountText,
 } from './styles';
 
-import welcomeImg from '../../assets/welcome.png';
+import welcomeImg from '../../assets/save-money.png';
 
 const Welcome: React.FC = () => {
   return (
