@@ -1,6 +1,7 @@
 import React from 'react';
 import { Image } from 'react-native';
 import Icon from '@expo/vector-icons/Feather';
+import { useNavigation } from '@react-navigation/native';
 
 import safeBoxImg from '../../../assets/safe-box.png';
 
@@ -14,7 +15,9 @@ import {
   ButtonSkipText,
 } from './styles';
 
-const DescriptionOne: React.FC = () => {
+const DescriptionThree: React.FC = () => {
+  const navigation = useNavigation();
+
   return (
     <Container>
       <Image source={safeBoxImg} />
@@ -28,7 +31,11 @@ const DescriptionOne: React.FC = () => {
         </DescriptionText>
       </Description>
 
-      <ButtonNext>
+      <ButtonNext
+        onPress={() => {
+          navigation.navigate('SignUp');
+        }}
+      >
         <Icon name="arrow-right" size={24} color="#fff" />
       </ButtonNext>
 
@@ -39,4 +46,4 @@ const DescriptionOne: React.FC = () => {
   );
 };
 
-export default DescriptionOne;
+export default DescriptionThree;

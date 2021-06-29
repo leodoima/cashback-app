@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, Image } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 
 import {
   Title,
@@ -16,6 +17,8 @@ import {
 import welcomeImg from '../../assets/save-money.png';
 
 const Welcome: React.FC = () => {
+  const navigation = useNavigation();
+
   return (
     <>
       <Container>
@@ -37,7 +40,13 @@ const Welcome: React.FC = () => {
         <Account>
           <AccountText>Ainda não possui uma conta?</AccountText>
           <ButtonAccount>
-            <ButtonAccountText>Clique aqui</ButtonAccountText>
+            <ButtonAccountText
+              onPress={() => {
+                navigation.navigate('DescriptionOne');
+              }}
+            >
+              Clique aqui
+            </ButtonAccountText>
           </ButtonAccount>
         </Account>
       </Container>
